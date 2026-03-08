@@ -91,14 +91,8 @@ Il sito fornisce un elenco di libri già censiti oppure si possono censirne di n
 Per ogni libro viene mostrato l'elenco di vendtori e permette contattare i gli utenti tramite chat.
 
 
-## Other
+## Altro
 
-> Without requirements or design, programming is the art of adding bugs to an empty text file.
+> "Without requirements or design, programming is the art of adding bugs to an empty text file."
+
 -- Louis Srygley
-
-Ispirato al sito di [Daniel Fischer](https://www.danielfischer.com/) e [Motherfucking website](https://motherfuckingwebsite.com/)
-
-<p class="small">
-    Ispirato al sito di <a href="">Daniel Fischer</a> e <a
-        href="">Motherfucking website</a>
-</p>

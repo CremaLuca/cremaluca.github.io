@@ -6,7 +6,18 @@ email: lc.crema@hotmail.com
 # Build settings
 markdown: kramdown
 theme: null
-plugins: []
+plugins:
+  - jekyll-github-metadata
+
+# Syntax highlighting
+highlighter: rouge
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
 
 # Exclude from Jekyll
 exclude:

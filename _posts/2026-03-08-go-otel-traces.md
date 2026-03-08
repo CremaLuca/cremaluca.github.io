@@ -18,8 +18,6 @@ Il framework [Open Telemetry](https://opentelemetry.io/docs/) definisce come **m
 Nello specifico in questo articolo si parlerà di come utilizziamo Open Telemetry per osservare le **tracce** generate dai servizi di back-end con cui interagiscono gli utenti in modo da:
 
 * velocizzare la ricostruzione del quadro generale in caso di segnalazioni
-
-
 * anticipare i problemi segnalando servizi particolarmente lenti o con più alte percentuali di errori del solito
 * tenere un grafo delle dipendenze ed il tipo di messaggi scambiati per valutare gli impatti delle modifiche alle API interne
 
@@ -46,7 +44,8 @@ Nelle **resources** oltre al `service.name` includiamo:
 * `host.name`, `host.id`, `process.pid`
 * `deployment.environment` letto da `$ENV` (dev/test/prod)
 
-Per la **propagazione** del contesto, e quindi del "parent trace id", utilizziamo il propagatore `TraceContext{}` di default. Per "iniettare" ed estrarre i campi propagati abbiamo dovuto scrivere un `NatsHeaderContext{}` poiché sebbene `nats.Header` sia un `map[string][]string` esattamente come `http.Header`, il `HeaderContext{}` fornito da open telemetry gestisce esclusivamente gli header HTTP.\nNella propagazione è possibile includere anche il **baggage**, ma non ho ancora ben capito la differenza che ha con gli attributi quindi se ne sai qualcosa di più scrivimi pure e *propaga* la tua conoscenza anche a me.
+Per la **propagazione** del contesto, e quindi del "parent trace id", utilizziamo il propagatore `TraceContext{}` di default. Per "iniettare" ed estrarre i campi propagati abbiamo dovuto scrivere un `NatsHeaderContext{}` poiché sebbene `nats.Header` sia un `map[string][]string` esattamente come `http.Header`, il `HeaderContext{}` fornito da open telemetry gestisce esclusivamente gli header HTTP.
+Nella propagazione è possibile includere anche il **baggage**, ma non ho ancora ben capito la differenza che ha con gli attributi quindi se ne sai qualcosa di più scrivimi pure e *propaga* la tua conoscenza anche a me.
 
 ### Noop e unit tests
 

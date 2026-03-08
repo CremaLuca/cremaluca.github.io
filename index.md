@@ -90,7 +90,5 @@ For each book it lists who is selling it and allow you to get in touch with the 
 ## Other
 
 > Without requirements or design, programming is the art of adding bugs to an empty text file.
--- Louis Srygley
 
-Inspired by [Daniel Fischer](https://www.danielfischer.com/) and
-[Motherfucking website](https://motherfuckingwebsite.com/)
+-- Louis Srygley

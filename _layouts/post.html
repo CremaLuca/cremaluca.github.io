@@ -16,6 +16,13 @@
 </head>
 
 <body>
+    <top>
+        {% if page.lang == 'it' %}
+            <a class="small" href="{{ '/it/' | relative_url }}">Home</a>
+        {% else %}
+            <a class="small" href="{{ '/' | relative_url }}">Home</a>
+        {% endif %}
+    </top>
     <main>
         {{ content }}
     </main>
