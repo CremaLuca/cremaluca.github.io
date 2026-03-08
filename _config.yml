@@ -1,0 +1,22 @@
+title: Luca Crema
+description: Hi, I am Luca Crema and this is my website on GitHub.
+author: Luca Crema
+email: lc.crema@hotmail.com
+
+# Build settings
+markdown: kramdown
+theme: null
+plugins: []
+
+# Exclude from Jekyll
+exclude:
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+
+# URL configuration
+url: https://cremaluca.com
+
+# Output settings
+permalink: /:categories/:title/

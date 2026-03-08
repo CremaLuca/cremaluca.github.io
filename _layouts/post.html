@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'en' }}">
+
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=0.8, maximum-scale=1.2">
+    <meta name="description" content="{{ site.description }}">
+    <title>{{ page.title | default: site.title }}</title>
+    <link href="{{ '/favicon.ico' | relative_url }}" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    {% for tag in page.tags %}
+    <meta name="keywords" content="{{ tag }}">
+    {% endfor %}
+</head>
+
+<body>
+    <main>
+        {{ content }}
+    </main>
+    <footer>
+        <p>&copy; {{ site.time | date: '%Y' }} Luca Crema</p>
+
+        {% if page.lang == 'it' %}
+        <p class="small">
+            Ispirato al sito di <a href="https://www.danielfischer.com/">Daniel Fischer</a> e <a
+                href="https://motherfuckingwebsite.com/">Motherfucking website</a>
+        </p>
+        {% else %}
+        <p class="small">
+            Inspired by <a href="https://www.danielfischer.com/">Daniel Fischer</a> and <a
+                href="https://motherfuckingwebsite.com/">Motherfucking website</a>
+        </p>
+        {% endif %}
+    </footer>
+</body>
+</html>

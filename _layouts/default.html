@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'en' }}">
+
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=0.8, maximum-scale=1.2">
+    <meta name="description" content="{{ site.description }}">
+    <title>{{ page.title | default: site.title }}</title>
+    <link href="{{ '/favicon.ico' | relative_url }}" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+
+<body>
+    <top>
+        {% if page.lang == 'it' %}
+            <a class="small" href="{{ '/' | relative_url }}">&#187; In English</a>
+        {% else %}
+            <a class="small" href="{{ '/it/' | relative_url }}">&#187; In italiano</a>
+        {% endif %}
+    </top>
+    <main>
+        <h1>Luca Crema</h1>
+        {% if page.lang == 'it' %}
+            <p class="lead">Scrivere codice non è mai stata la parte difficile.</p>
+        {% else %}
+            <p class="lead">Writing code was never the hard part.</p>
+        {% endif %}
+        <h2>Blog</h2>
+        {% for post in site.posts %}
+            <article>
+                <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                <span class="small">{{ post.date | date: "%B %d, %Y" }}</span>
+                <span class="small"><strong>Lang</strong>: {{ post.lang }}</span>
+                {% if post.tags %}
+                <span class="small"><strong>Tags</strong>: {{ post.tags | join: ", " }}</span>
+                {% endif %}
+                {% if page.lang == 'it' %}
+                <p>{{ post.excerpt_it | default: post.excerpt }}</p>
+                {% else %}
+                <p>{{ post.excerpt_en | default: post.excerpt }}</p>
+                {% endif %}
+            </article>
+        {% endfor %}
+        {{ content }}
+        <section name="contacts">
+            {% if page.lang == 'it' %}
+            <h2>Contatti</h2>
+            {% else %}
+            <h2>Contacts</h2>
+            {% endif %}
+                <ul>
+                    <li><a href="https://www.github.com/Cremaluca">Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/lc-crema/">LinkedIn</a></li>
+                    <li>lc.crema [at] hotmail.com</li>
+                </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; {{ site.time | date: '%Y' }} Luca Crema</p>
+
+        {% if page.lang == 'it' %}
+        <p class="small">
+            Ispirato al sito di <a href="https://www.danielfischer.com/">Daniel Fischer</a> e <a
+                href="https://motherfuckingwebsite.com/">Motherfucking website</a>
+        </p>
+        {% else %}
+        <p class="small">
+            Inspired by <a href="https://www.danielfischer.com/">Daniel Fischer</a> and <a
+                href="https://motherfuckingwebsite.com/">Motherfucking website</a>
+        </p>
+        {% endif %}
+    </footer>
+</body>
+</html>
