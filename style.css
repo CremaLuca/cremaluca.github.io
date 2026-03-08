@@ -132,3 +132,7 @@ top {
 .project-details .collaborators a {
     font-weight: bold;
 }
+
+.project-details .workplace a {
+    font-weight: bold;
+}
