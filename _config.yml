@@ -8,6 +8,10 @@ markdown: kramdown
 theme: null
 plugins:
   - jekyll-github-metadata
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+
 
 # Syntax highlighting
 highlighter: rouge

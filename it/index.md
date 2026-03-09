@@ -79,8 +79,6 @@ Un gioco clicker basato sul nuoto con lo scopo di battere il computer con diffic
 Una successiva versione permette di comparare i propri risultati usando le classifiche di
 Google Play Services.
 
-
-
 ### [Rivendilibro](http://rivendilibro.altervista.org/)
 
 > PHP + JQuery ~ da 05/2016 a 06/2016
