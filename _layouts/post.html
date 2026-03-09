@@ -14,6 +14,9 @@
     <meta name="keywords" content="{{ tag }}">
     {% endfor %}
     {% if page.excerpt %}
+    {% if page.lang == 'it' %}
+    <meta name="description" content="{{ page.excerpt_it | default: page.excerpt_en | default: page.excerpt | strip_html | strip_newlines | truncate: 160 }}">
+    {% else %}
     <meta name="description" content="{{ page.excerpt_en | default: page.excerpt_it | default: page.excerpt | strip_html | strip_newlines | truncate: 160 }}">
     {% endif %}
 </head>
