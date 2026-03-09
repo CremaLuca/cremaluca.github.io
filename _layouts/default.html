@@ -31,7 +31,7 @@
         {% for post in site.posts %}
             <article>
                 <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-                <span class="small">{{ post.date | date: "%B %d, %Y" }}</span>
+                <span class="small">{{ post.date | date: "%d %B %Y" }}</span>
                 <span class="small"><strong>Lang</strong>: {{ post.lang }}</span>
                 {% if post.tags %}
                 <span class="small"><strong>Tags</strong>: {{ post.tags | join: ", " }}</span>

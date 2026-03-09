@@ -6,9 +6,6 @@ lang: it
 excerpt_en: "My experience on how we introduced OpenTelemetry to trace requests in Golang services, the difficulties we encountered and what we learned."
 excerpt_it: "La mia esperienza su come abbiamo introdotto OpenTelemetry per tracciare le richieste nei servizi scritti in Golang, le difficoltà incontrate e cosa abbiamo imparato."
 ---
-
-# Go OTel traces!
-
 Il framework [Open Telemetry](https://opentelemetry.io/docs/) definisce come **misurare**, **collezionare** e **trasportare** tre tipi di informazione:
 
 * tracce
