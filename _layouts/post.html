@@ -13,6 +13,9 @@
     {% for tag in page.tags %}
     <meta name="keywords" content="{{ tag }}">
     {% endfor %}
+    {% if page.excerpt %}
+    <meta name="description" content="{{ page.excerpt_en | default: page.excerpt_it | default: page.excerpt | strip_html | strip_newlines | truncate: 160 }}">
+    {% endif %}
 </head>
 
 <body>
