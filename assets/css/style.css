@@ -2,12 +2,18 @@ html {
     font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 137.5%;
     -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
 p {
     line-height: 1.5rem;
     margin-top: 1rem;
     margin-bottom: 0;
+    word-wrap: break-word;
 }
 
 ul,
@@ -70,16 +76,20 @@ code {
 }
 
 main {
-    width: 720px;
+    max-width: 720px;
+    width: 100%;
     margin: 0 auto;
+    padding: 0 16px;
 }
 
 footer {
     margin-top: 3rem;
     margin-bottom: 1rem;
-    width: 720px;
+    max-width: 720px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 16px;
 }
 
 .lead {
@@ -101,11 +111,82 @@ span {
 }
 
 @media only screen and (max-width: 812px) {
-    body {
-        margin: 16px;
+    html {
+        font-size: 112.5%; /* Smaller base font on mobile */
     }
-    main {
+    
+    body {
+        margin: 0;
+    }
+    
+    main, footer {
         width: 100%;
+        padding: 0 20px;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+        margin-top: 2rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    
+    .lead {
+        font-size: 1.3rem;
+    }
+    
+    top {
+        position: static;
+        display: block;
+        text-align: right;
+        padding: 10px 20px;
+        margin-bottom: 1rem;
+    }
+    
+    pre.highlight {
+        font-size: 0.7rem;
+        padding: 0.5rem;
+        margin: 1rem -20px; /* Extend to edges */
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    html {
+        font-size: 100%; /* Even smaller for small phones */
+    }
+    
+    main, footer {
+        padding: 0 16px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+    
+    h3 {
+        font-size: 1.2rem;
+    }
+    
+    .lead {
+        font-size: 1.1rem;
+    }
+    
+    pre.highlight {
+        font-size: 0.65rem;
+        margin: 1rem -16px;
     }
 }
 
